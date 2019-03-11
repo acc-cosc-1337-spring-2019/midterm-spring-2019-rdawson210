@@ -1,8 +1,15 @@
-/*
-Create a Die class interface to model a game with 6 sides 
-and values 1,2,3,4,5, and 6.
+#ifndef CLASS_H
+#define CLASS_H
 
-public function roll that returns an int
+class Die
+{
+public:
+	void roll();
+	int const rolled_value();
 
-private int sides with a value of 6
-*/
+private:
+	int roll_value;
+	int sides{ 6 };
+};
+
+#endif //CLASS_H

@@ -1,13 +1,26 @@
-/*
-Create two Die instances.
-Create a vector of Roll
-Create a 20iteration loop and create a Roll instance, call roll function, 
-output rolled values, and add to vector.
+#include "die.h"
+#include "roll.h"
+#include <vector>
+#include <iostream>
 
-Loop through vector of Roll and output roll result
-*/
+using std::vector;
+using std::cout;
+
 int main() 
 {
 	
-	return 0;
+	Die die1;
+	Die die2;
+	vector<Roll> rolls;
+	for (int i = 0; i < 20; i++)
+	{
+		Roll turn(die1, die2);
+		turn.roll();
+		cout << "Value 1: " << turn.value_1() << "\n" << "Value 2: " << turn.value_2() << "\n";
+		rolls.push_back(turn);
+	}
+	for (auto c : rolls)
+	{
+		cout << "Results: " << c.value_1() << " and " << c.value_2() << "\n";
+	}
 }

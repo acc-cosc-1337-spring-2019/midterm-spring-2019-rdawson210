@@ -1,12 +1,18 @@
-//Write include statement
-/*
-Program runs until user opts out.
+#include "die.h"
+#include<iostream>
 
-For each loop Roll die and display output
-
-*/
+using std::cout;
+using std::cin;
 
 int main() 
 {
-	return 0;
+	char choice;
+	do
+	{
+		Die game;
+		game.roll();
+		cout << "Roll Result:  " << game.rolled_value() << "\n";
+		cout << "To roll again, press 1. To exit, press any key." << "\n";
+		cin >> choice;
+	} while (choice == '1');
 }
