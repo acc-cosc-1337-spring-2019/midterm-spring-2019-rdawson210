@@ -16,7 +16,7 @@ TEST_CASE("Testing empty string result")
 	REQUIRE(game.result() == "");
 }
 
-/*
+
 TEST_CASE("Testing valid results")
 {
 	Die d1, d2;
@@ -24,17 +24,20 @@ TEST_CASE("Testing valid results")
 	for (int i = 0; i < 20; i++)
 	{
 		game.roll();
-		REQUIRE(game.result() == );
+		if (game.value_1() + game.value_2() == 2 ||
+			game.value_1() + game.value_2() == 3 ||
+			game.value_1() + game.value_2() == 12)
+			{
+			REQUIRE(game.result() == "Craps");
+			}
+		else if (game.value_1() + game.value_2() == 7 ||
+				game.value_1() + game.value_2() == 11)
+		{
+			REQUIRE(game.result() == "Natural");
+		}
+		else
+		{
+			REQUIRE(game.result() == "Points");
+		}
 	}
 }
-*/
-
-
-/*
-Write a test case to assert that every dice roll returns a valid result:
-Craps
-Natural
-Point
-
-(Loop at least 20 times and create an assert in the loop.)
-*/

@@ -21,6 +21,6 @@ int main()
 	}
 	for (auto c : rolls)
 	{
-		cout << "Results: " << c.value_1() << " and " << c.value_2() << "\n";
+		cout << "Results: " << c.result() << "\n";
 	}
 }
