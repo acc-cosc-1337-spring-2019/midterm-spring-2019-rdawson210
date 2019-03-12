@@ -1,4 +1,9 @@
+#include"shooter.h"
+#include<vector>
+#include<iostream>
 
+using std::cout;
+using std::vector;
 /*
 Program runs until user opts out.
 Create two Die instances, a Shooter instance, and a vector of Roll objects.
@@ -9,6 +14,13 @@ In another loop iterate the vector of Roll and dislplay the Roll result.
 */
 int main() 
 {
-
-	return 0;
+	Die die1;
+	Die die2;
+	Shooter game;
+	char choice;
+	vector<Roll> history;
+	do
+	{
+		return 0;
+	} while (choice == '1');
 }
