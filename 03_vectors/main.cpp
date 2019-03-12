@@ -24,9 +24,9 @@ int main()
 			cin >> choice;
 		} while (choice == '1');
 		int size = input.length();
-		vector<int> a_cons = { size, 0 };
-		vector<int> t_cons = { size, 0 };
-		vector<int> c_cons = { size, 0 };
-		vector<int> g_cons = { size, 0 };
+		string a_cons = "";
+		string t_cons = "";
+		string c_cons = "";
+		string g_cons = "";
 	}
 }

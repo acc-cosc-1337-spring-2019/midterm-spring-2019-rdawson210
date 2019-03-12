@@ -2,8 +2,9 @@
 #include<iostream>
 
 using std::cout;
+using std::to_string;
 
-string final_consensus(vector<int> a_cons, vector<int> t_cons, vector<int> c_cons, vector<int> g_cons)
+string final_consensus(string a_cons, string t_cons, string c_cons, string g_cons)
 {
 	string consensus = "";
 	int v = 0;
@@ -29,28 +30,38 @@ string final_consensus(vector<int> a_cons, vector<int> t_cons, vector<int> c_con
 	return consensus;
 }
 
-void build_profile(vector<string> dna_dataset, vector<int>& a_cons, vector<int>& t_cons, vector<int>& c_cons, vector<int>& g_cons)
+/*
+void build_profile(vector<string>dna_dataset, string& a_cons, string& t_cons, string& c_cons, string& g_cons)
 {
-	for (int c = 0; c < dna_dataset.size(); c++) // make these manual loops, not autp
+	int a_temp = 0;
+	int t_temp = 0;
+	int c_temp = 0;
+	int g_temp = 0;
+	for (int a = 0; a < dna_dataset[a].length(); a++) //THIS LINE CAUSES CRASH
 	{
-		for (int v = 0; v < dna_dataset[c].size(); v++)
+		for (auto b : dna_dataset[a])
 		{
-			if (v == 'A' || v == 'a')
+			if (b == 'A' || b == 'a')
 			{
-				++a_cons[v];
+				++a_temp;
 			}
-			else if (v == 'T' || v == 't')
+			else if (b == 'T' || b == 't')
 			{
-				++t_cons[v];
+				++t_temp;
 			}
-			else if (v == 'C' || v == 'c')
+			else if (b == 'C' || b == 'c')
 			{
-				++c_cons[v];
+				++c_temp;
 			}
-			else if (v == 'G' || v == 'g')
+			else
 			{
-				++g_cons[v];
+				++g_temp;
 			}
 		}
+		a_cons += to_string(a_temp);
+		t_cons += to_string(t_temp);
+		c_cons += to_string(c_temp);
+		g_cons += to_string(g_temp);
 	}
 }
+*/
