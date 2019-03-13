@@ -30,30 +30,31 @@ string final_consensus(string a_cons, string t_cons, string c_cons, string g_con
 	return consensus;
 }
 
-/*
-void build_profile(vector<string>dna_dataset, string& a_cons, string& t_cons, string& c_cons, string& g_cons)
+
+string build_profile(vector<string>dna_dataset, string& a_cons, string& t_cons, string& c_cons, string& g_cons)
 {
-	int a_temp = 0;
-	int t_temp = 0;
-	int c_temp = 0;
-	int g_temp = 0;
-	for (int a = 0; a < dna_dataset[a].length(); a++) //THIS LINE CAUSES CRASH
+	for (int a = 0; a < dna_dataset[0].length(); a++)
 	{
-		for (auto b : dna_dataset[a])
+		int a_temp = 0;
+		int t_temp = 0;
+		int c_temp = 0;
+		int g_temp = 0;
+		for (int b = 0; b< dna_dataset.size(); b++)
 		{
-			if (b == 'A' || b == 'a')
+			string temp = dna_dataset[b];
+			if (temp[a] == 'A' || temp[a] == 'a')
 			{
 				++a_temp;
 			}
-			else if (b == 'T' || b == 't')
+			else if (temp[a] == 'T' || temp[a] == 't')
 			{
 				++t_temp;
 			}
-			else if (b == 'C' || b == 'c')
+			else if (temp[a] == 'C' || temp[a] == 'c')
 			{
 				++c_temp;
 			}
-			else
+			else if (temp[a] == 'G' || temp[a] == 'g')
 			{
 				++g_temp;
 			}
@@ -63,5 +64,6 @@ void build_profile(vector<string>dna_dataset, string& a_cons, string& t_cons, st
 		c_cons += to_string(c_temp);
 		g_cons += to_string(g_temp);
 	}
+	string consensus = final_consensus(a_cons, t_cons, c_cons, g_cons);
+	return consensus;
 }
-*/
