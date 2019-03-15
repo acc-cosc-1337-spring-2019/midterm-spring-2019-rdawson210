@@ -3,6 +3,7 @@
 #include<iostream>
 
 using std::cout;
+using std::cin;
 using std::vector;
 /*
 Program runs until user opts out.
@@ -17,10 +18,20 @@ int main()
 	Die die1;
 	Die die2;
 	Shooter game;
-	char choice;
+	char choice = '1';
 	vector<Roll> history;
-	do
+	int i = 0;
+	while (choice == '1' && i < 10)
 	{
-		return 0;
-	} while (choice == '1');
+		cout << "To shoot, press 1" << "\n";
+		cin >> choice;
+		Roll rollgame = game.shoot(die1, die2);
+		history.push_back(rollgame);
+		i++;
+		cout << "User roll #" << i << "\n";
+	}
+	for (auto v : history)
+	{
+		cout << "Results:" << v.result() << "\n";
+	}
 }

@@ -1,12 +1,11 @@
 #include "die.h"
-/*
-Create a Die instance and copy to another Die variable. 
-Explain what happens with comments in your code.
-Create a reference to a Die, explain what happens with comments in your code.  
-Create test cases in 08_class_copy_test.
-*/
 
 int main() 
 {
-	
+	Die original;
+	Die copy = original; //copy is created and matches original at this point only. When changes are made
+						//they will no longer match
+	Die & reference = original; //as a reference, any changes made to original will be made to reference as
+								//well, and vice versa
+
 }

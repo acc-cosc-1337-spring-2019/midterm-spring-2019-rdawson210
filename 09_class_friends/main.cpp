@@ -1,8 +1,16 @@
-/*
-Create an instance of roll and call the friend function to output roll values
-*/
-int main() 
+#include "roll_friend.h"
+#include <vector>
+#include <iostream>
+
+using std::vector;
+using std::cout;
+
+int main()
 {
-	
-	return 0;
+
+	Die die1;
+	Die die2;
+	Roll turn(die1, die2);
+	turn.roll();
+	cout << turn;
 }

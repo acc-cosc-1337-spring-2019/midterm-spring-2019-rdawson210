@@ -32,7 +32,7 @@ string Roll::result()
 	}
 	else
 	{
-		return "";
+		return "Must roll first!";
 	}
 }
 

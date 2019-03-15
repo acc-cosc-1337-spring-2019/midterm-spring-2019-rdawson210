@@ -13,7 +13,7 @@ TEST_CASE("Testing empty string result")
 {
 	Die d1, d2;
 	Roll game(d1, d2);
-	REQUIRE(game.result() == "");
+	REQUIRE(game.result() == "Must roll first!");
 }
 
 

@@ -1,4 +1,3 @@
-#include "die.h"
 #include "roll.h"
 #include <vector>
 #include <iostream>
