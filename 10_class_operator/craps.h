@@ -13,10 +13,10 @@ class Craps
 public:
 	void play_game();
 	friend ostream & operator <<(ostream & out, const Craps & v);
-	friend istream & operator >>(istream & in, const Craps & s);
+	friend istream & operator >>(istream & in, Craps & game);
 private:
 	vector<Roll> rolls;
 	vector<Shooter> shooters;
-}
+};
 
 #endif //CRAPS_H
