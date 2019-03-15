@@ -60,9 +60,11 @@ void Craps::play_game()
 
 ostream & operator<<(ostream & out, const Craps & game)
 {
+	int i = 1;
 	for (auto f : game.rolls)
 	{
-		out << "Result: " << f.result() << "\n";
+		out << "Roll #" << i << " Result: " << f.result() << "\n";
+		i++;
 	}
 	return out;
 }

@@ -65,6 +65,7 @@ bool Roll::natural()
 
 ostream & operator<<(ostream & out, const Roll & b)
 {
+	out << "Results:" << "\n";
 	out << "Die 1: " << b.die1_roll_value << "\n";
 	out << "Die 2: " << b.die2_roll_value << "\n";
 	return out;

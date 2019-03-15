@@ -18,8 +18,10 @@ int main()
 		cout << "Value 1: " << turn.value_1() << "\n" << "Value 2: " << turn.value_2() << "\n";
 		rolls.push_back(turn);
 	}
+	int i = 1;
 	for (auto c : rolls)
 	{
-		cout << "Results: " << c.result() << "\n";
+		cout << "Roll #" << i << " Results: " << c.result() << "\n";
+		i++;
 	}
 }

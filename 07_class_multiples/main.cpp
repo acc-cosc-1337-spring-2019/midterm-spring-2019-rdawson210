@@ -30,8 +30,10 @@ int main()
 		i++;
 		cout << "User roll #" << i << "\n";
 	}
+	i = 1;
 	for (auto v : history)
 	{
-		cout << "Results:" << v.result() << "\n";
+		cout << "Roll #" << i << " Results:" << v.result() << "\n";
+		i++;
 	}
 }

@@ -19,7 +19,8 @@ TEST_CASE("Test final_consensus")
 	string t_cons2 = "15440116";
 	string c_cons2 = "60142011";
 	string g_cons2 = "11030100";
-	REQUIRE(final_consensus(a_cons2, t_cons2, c_cons2, g_cons2) == "CTTCAACT"); // confirms - when several options are possible, function selects last option
+	REQUIRE(final_consensus(a_cons2, t_cons2, c_cons2, g_cons2) == "CTTCAACT"); // confirms - when several options are possible, function
+																				//prioritizes g, then c, then t, then a.
 }
 
 TEST_CASE("Test build_profile")

@@ -25,9 +25,11 @@ int main()
 		cout << "Die 1: " << game.value_1() << "\n" << "Die 2: " << game.value_2() << "\n";
 		log.push_back(game);
 	}
+	int i = 1;
 	for (auto c : log)
 	{
-		cout << "Results: " << c.result() << "\n";
+		cout << "Roll #" << i << " Results: " << c.result() << "\n";
+		i++;
 	}
 
 }
